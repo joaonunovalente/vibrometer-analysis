@@ -31,10 +31,10 @@ M6 = M6.FRF_vibrometro;
 %------------------------------------------------------------------------
 M1_corr = M1;  
 M2_corr = M2;   
-M3_corr = M3 / cosd(50);  
-M4_corr = M4 / cosd(22.61);   
-M5_corr = M5 / cosd(27.69);   
-M6_corr = M6 / cosd(35); 
+M3_corr = M3 / cosd(44.53);
+M4_corr = M4 / cosd(22.61);
+M5_corr = M5 / cosd(27.69);
+M6_corr = M6 / cosd(46.09);
 
 %------------------------------------------------------------------------
 % Average z components
@@ -60,7 +60,7 @@ semilogy(f, abs(Z), 'DisplayName', 'M3 + M4 + M5 + M6');
 legend('Location', 'best');
 xlabel('Frequency [Hz]');
 ylabel('Magnitude');
-title('Comparison of Reconstructed Longitudinal Component and Orthogonal Reference');
+% title('Comparison of Reconstructed Longitudinal Component and Orthogonal Reference');
 grid on;
 
 % --- Comparision of Longitudinal Components
@@ -75,7 +75,7 @@ semilogy(f, abs(M6_corr), 'DisplayName', 'M6');
 legend('Location', 'best');
 xlabel('Frequency [Hz]');
 ylabel('Magnitude');
-title('Comparison of Reconstructed Longitudinal Component and Orthogonal Reference');
+% title('Comparison of Reconstructed Longitudinal Component and Orthogonal Reference');
 grid on;
 
 % --- Error relative to orthogonal measurement
@@ -92,7 +92,7 @@ plot(f, 20 * log10(abs(Z5 ./ M1)), 'DisplayName', 'M5 + M6 [dB]');
 xlabel('Frequency [Hz]');
 ylabel('Relative Error [dB]');
 legend('Location', 'best');
-title('Relative Error');
+% title('Relative Error');
 grid on;
 
 %------------------------------------------------------------------------
